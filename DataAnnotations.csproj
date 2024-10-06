@@ -1,29 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <NeutralLanguage>pt-BR</NeutralLanguage>
         <IncrementVersionOnBuild>1.yyyy.Mdd.Hmm</IncrementVersionOnBuild>
         <FileVersion>$(VersionPrefix)</FileVersion>
         <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
-        <Version>1.2023.703.110</Version>
+        <Version>2.2023.1118.1</Version>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <PackageId>CBT.DataAnnotations</PackageId>
-	    <Title>$(PackageId)</Title>
+        <PackageId>CastelloBranco.DataAnnotations</PackageId>
+	<Title>$(PackageId)</Title>
         <PackageDescription>$(PackageId)</PackageDescription>
         <Company>Castello Branco Tecnologia</Company>
         <Copyright>$(Company)</Copyright>
         <Authors>$(Company)</Authors>
-	    <RepositoryType>nuget</RepositoryType>
+	<RepositoryType>nuget</RepositoryType>
         <RepositoryUrl>https://github.com/CastelloBrancoTecnologia/$(PackageId)</RepositoryUrl>
         <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
-
-	<Target Name="PushNuGetPackage" AfterTargets="GenerateNuspec">
-		<Message Text="Push NuGet Package to NuGet Feed" Importance="high"></Message>
-		<Exec Command="dotnet nuget push &quot;$(ProjectDir)bin\$(Configuration)\$(AssemblyName).$(Version).nupkg&quot; -k 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 "></Exec>
-	</Target>
 
 	<ItemGroup>
     <Compile Update="Resources\SharedResources.Designer.cs">
@@ -45,5 +40,10 @@
       <LastGenOutput>SharedResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+    <Target Name="PushNuGetPackage" AfterTargets="GenerateNuspec">
+	    <Message Text="Push NuGet Package to NuGet Feed" Importance="high"></Message>
+	    <Exec Command="$(ProjectDir)..\publicanuget.cmd &quot;$(ProjectDir)bin\$(Configuration)\$(AssemblyName).$(Version).nupkg&quot; "></Exec>
+    </Target>
 
 </Project>

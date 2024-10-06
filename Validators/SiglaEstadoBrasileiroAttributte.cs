@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Linq;
 
-using CBT.DataAnnotations.Resources;
-using CBT.Singletons;
+using CastelloBranco.DataAnnotations.Resources;
+using CastelloBranco.Singletons;
 
-namespace CBT.DataAnnotations;
+namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
 public class SiglaEstadoBrasileiro : ValidationAttribute
@@ -35,6 +35,6 @@ public class SiglaEstadoBrasileiro : ValidationAttribute
             return AllowEmpty;
         }
 
-        return EstadosDoBrasil.Estados.Any (s => s.Sigla.ToUpper () == stringValue.ToUpper());
+        return BrazilianStates.Estados.Any (s => s.Sigla.ToUpper () == stringValue.ToUpper());
     }
 }

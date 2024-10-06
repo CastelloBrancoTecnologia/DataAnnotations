@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CBT.Singletons;
+namespace CastelloBranco.Singletons;
 
 public static class OrgaosExpedicao
 {

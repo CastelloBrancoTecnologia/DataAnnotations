@@ -8,7 +8,7 @@ using System.Resources;
 using System.ComponentModel;
 using System.Threading;
 
-namespace CBT.DataAnnotations.Resources;
+namespace CastelloBranco.DataAnnotations.Resources;
 
 public partial class SharedResources : INotifyPropertyChanged
 {

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CBT.Singletons;
+namespace CastelloBranco.Singletons;
 
-public class Regiao_ddd
+public class PhoneAreaCode
 {
-    public string Ddd { get; set; } = String.Empty;
-    public string Estado { get; set; } = String.Empty;
-    public string Regiao { get; set; } = String.Empty;
+    public string AreaCode { get; set; } = String.Empty;
+    public string State { get; set; } = String.Empty;
+    public string Region { get; set; } = String.Empty;
 }

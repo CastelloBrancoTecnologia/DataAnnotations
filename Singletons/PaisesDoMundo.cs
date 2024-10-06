@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CBT.Singletons;
+namespace CastelloBranco.Singletons;
 
 public static class PaisesDoMundo
 {

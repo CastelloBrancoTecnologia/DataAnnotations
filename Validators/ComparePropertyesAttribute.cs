@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-using CBT.DataAnnotations.Resources;
+using CastelloBranco.DataAnnotations.Resources;
 
 namespace System.ComponentModel.DataAnnotations;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CBT.Singletons;
+namespace CastelloBranco.Singletons;
 
 public class GentilicoEstadual
 {

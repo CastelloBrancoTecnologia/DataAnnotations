@@ -8,9 +8,9 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Reflection;
 
-using CBT.DataAnnotations.Resources;
+using CastelloBranco.DataAnnotations.Resources;
 
-namespace CBT.DataAnnotations;
+namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
 public class CEP : ValidationAttribute

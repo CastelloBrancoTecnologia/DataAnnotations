@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using System.Linq;
 
-using CBT.DataAnnotations.Resources;
+using CastelloBranco.DataAnnotations.Resources;
 
-namespace CBT.DataAnnotations;
+namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
 public class PasswordAttribute : ValidationAttribute
@@ -36,17 +36,17 @@ public class PasswordAttribute : ValidationAttribute
 
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
-        if (value is not string senha)
+        if (value is not string password)
             throw new InvalidCastException();
 
-        if (string.IsNullOrWhiteSpace(senha))
+        if (string.IsNullOrWhiteSpace(password))
             return new ValidationResult(SharedResources.NotEmptyErrorMessage);
 
-        senha = senha.Trim(); // Remove spaces
+        password = password.Trim(); // Remove spaces
 
         if (RequireUppercaseLetter)
         {
-            if (!senha.Any(ch => char.IsUpper(ch)))
+            if (!password.Any(ch => char.IsUpper(ch)))
             {
                 return new ValidationResult(SharedResources.RequireUppercaseLetterErrorMessage);
             }
@@ -54,7 +54,7 @@ public class PasswordAttribute : ValidationAttribute
 
         if (RequireLowercaseLetter)
         {
-            if (!senha.Any(ch => char.IsLower(ch)))
+            if (!password.Any(ch => char.IsLower(ch)))
             {
                 return new ValidationResult(SharedResources.RequireLowercaseLetterErrorMessage);
             }
@@ -62,7 +62,7 @@ public class PasswordAttribute : ValidationAttribute
 
         if (RequireLetter)
         {
-            if (!senha.Any(ch => char.IsLetter(ch)))
+            if (!password.Any(ch => char.IsLetter(ch)))
             {
                 return new ValidationResult(SharedResources.RequireLetterErrorMessage);
             }
@@ -70,7 +70,7 @@ public class PasswordAttribute : ValidationAttribute
 
         if (RequireDigit)
         {
-            if (!senha.Any(ch => char.IsDigit(ch)))
+            if (!password.Any(ch => char.IsDigit(ch)))
             {
                 return new ValidationResult(SharedResources.RequireDigitErrorMessage);
             }
@@ -78,7 +78,7 @@ public class PasswordAttribute : ValidationAttribute
 
         if (RequireSimbol)
         {
-            if (!senha.Any(ch => !char.IsLetter(ch) &&
+            if (!password.Any(ch => !char.IsLetter(ch) &&
                                   !char.IsDigit(ch) &&
                                   !char.IsControl(ch) &&
                                   !char.IsWhiteSpace(ch)))
@@ -89,7 +89,7 @@ public class PasswordAttribute : ValidationAttribute
 
         if (DontAllowRepeats)
         {
-            if (!(!senha.Where((c, i) => i >= 2 && senha[i - 1] == c && senha[i - 2] == c).Any()))
+            if (!(!password.Where((c, i) => i >= 2 && password[i - 1] == c && password[i - 2] == c).Any()))
             {
                 return new ValidationResult(SharedResources.DontAllowRepeatsErrorMessage);
             }
@@ -97,7 +97,7 @@ public class PasswordAttribute : ValidationAttribute
 
         if (DontAllowAscendentSequence)
         {
-            if (!(!senha.Where((c, i) => i >= 2 && ((senha[i - 1]) - 1) == c && ((senha[i - 2]) - 2) == c).Any()))
+            if (!(!password.Where((c, i) => i >= 2 && ((password[i - 1]) - 1) == c && ((password[i - 2]) - 2) == c).Any()))
             {
                 return new ValidationResult(SharedResources.DontAllowAscendentSequenceErrorMessage);
             }
@@ -105,18 +105,18 @@ public class PasswordAttribute : ValidationAttribute
 
         if (DontAllowDescendentSequence)
         {
-            if (!(!senha.Where((c, i) => i >= 2 && ((senha[i - 1]) + 1) == c && ((senha[i - 2]) + 2) == c).Any()))
+            if (!(!password.Where((c, i) => i >= 2 && ((password[i - 1]) + 1) == c && ((password[i - 2]) + 2) == c).Any()))
             {
                 return new ValidationResult(SharedResources.DontAllowDescendentSequenceErrorMessage);
             }
         }
 
-        if (senha.Length < MinimunLength)
+        if (password.Length < MinimunLength)
         {
             return new ValidationResult(SharedResources.PasswordMinimunLengthErrorMessage);
         }
 
-        if (senha.Length > MaximunLength)
+        if (password.Length > MaximunLength)
         {
             return new ValidationResult(SharedResources.PasswordMaximunLengthErrorMessage);
         }

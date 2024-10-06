@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-using CBT.DataAnnotations.Resources;
+using CastelloBranco.DataAnnotations.Resources;
 
-namespace CBT.DataAnnotations;
+namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
 public sealed class DateTimeOffsetDateGreaterThanAttribute : ValidationAttribute

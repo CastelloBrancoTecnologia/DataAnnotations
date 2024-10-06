@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Linq;
 
-using CBT.DataAnnotations.Resources;
-using CBT.Singletons;
+using CastelloBranco.DataAnnotations.Resources;
+using CastelloBranco.Singletons;
 
-namespace CBT.DataAnnotations;
+namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
 public class SiglaPais : ValidationAttribute
