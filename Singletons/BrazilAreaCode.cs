@@ -6,7 +6,7 @@ namespace CastelloBranco.Singletons;
 
 public static class BrazilAreaCode
 {
-    public static readonly List<PhoneAreaCode> DDDs = new ()
+    public static readonly List<PhoneAreaCode> AreaCodes = new ()
     {
         new () { AreaCode = "11",  State = "SP", Region = "Sao Paulo, São Paulo e Região Metropolitana" },
         new () { AreaCode = "12",  State = "SP", Region = "Sao Paulo, São José dos Campos/Taubaté/Vale do Paraíba" },

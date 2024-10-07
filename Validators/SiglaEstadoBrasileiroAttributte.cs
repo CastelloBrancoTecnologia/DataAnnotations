@@ -35,6 +35,6 @@ public class SiglaEstadoBrasileiro : ValidationAttribute
             return AllowEmpty;
         }
 
-        return BrazilianStates.Estados.Any (s => s.Sigla.ToUpper () == stringValue.ToUpper());
+        return BrazilianStates.Estados.Any (s => s.Acronym.ToUpper () == stringValue.ToUpper());
     }
 }

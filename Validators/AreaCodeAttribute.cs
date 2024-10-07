@@ -10,13 +10,13 @@ using CastelloBranco.Singletons;
 namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-public class DDD : ValidationAttribute
+public class AreaCode : ValidationAttribute
 {
-    public DDD() : base(SharedResources.DDDInvalido)
+    public AreaCode() : base(SharedResources.DDDInvalido)
     {
     }
 
-    public DDD(string ErrorMessage) : base(ErrorMessage) { }
+    public AreaCode(string ErrorMessage) : base(ErrorMessage) { }
 
     public bool AllowEmpty { get; set; }
 
@@ -46,6 +46,6 @@ public class DDD : ValidationAttribute
             return false;
         }
 
-        return BrazilAreaCode.DDDs.Any(d => d.AreaCode == stringValue);
+        return BrazilAreaCode.AreaCodes.Any(d => d.AreaCode == stringValue);
     }
 }
