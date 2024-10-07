@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CastelloBranco.Singletons;
 
-public static class NomesAleatorios
+public static class RandomNames
 {
-    public static string[] NomesFemininos =
+    public static string[] FemaleNames =
         {
             "Helena",
             "Alice",
@@ -84,7 +84,7 @@ public static class NomesAleatorios
             "Melinda",
             "Pérola" };
 
-    public static string[] NomesMasculinos =
+    public static string[] MaleNames =
         {
             "Miguel",
             "Davi",

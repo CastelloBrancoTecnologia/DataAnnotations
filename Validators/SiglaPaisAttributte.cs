@@ -35,6 +35,6 @@ public class SiglaPais : ValidationAttribute
             return AllowEmpty;
         }
 
-        return PaisesDoMundo.Paises.Any (s => s.Sigla.ToUpper () == stringValue.ToUpper());
+        return WorldCountries.Countries.Any (s => s.Acronym.ToUpper () == stringValue.ToUpper());
     }
 }

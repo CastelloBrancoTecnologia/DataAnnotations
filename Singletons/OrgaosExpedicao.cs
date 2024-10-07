@@ -17,6 +17,7 @@ public static class OrgaosExpedicao
         new  () { Sigla = "DPF",            Orgao = "Departamento de Polícia Federal" },
         new  () { Sigla = "DPM",            Orgao = "Departamento de Polícia Militar" },
         new  () { Sigla = "EB",             Orgao = "Exercito do Brasil" },
+        new  () { Sigla = "IGP",            Orgao = "Instituto Geral de Perícias" },
         new  () { Sigla = "MB",             Orgao = "Marinha do Brasil" },
         new  () { Sigla = "MT",             Orgao = "Ministério do Trabalho" },
         new  () { Sigla = "MTE",            Orgao = "Ministério do Trabalho e Emprego" },
