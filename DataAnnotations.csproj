@@ -6,8 +6,8 @@
         <NeutralLanguage>pt-BR</NeutralLanguage>
         <IncrementVersionOnBuild>1.yyyy.Mdd.Hmm</IncrementVersionOnBuild>
         <FileVersion>$(VersionPrefix)</FileVersion>
-        <AssemblyVersion>2410.7.0147.9</AssemblyVersion>
-        <Version>3.0.0.3</Version>
+        <AssemblyVersion>2410.7.0152.10</AssemblyVersion>
+        <Version>3.0.0.5</Version>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <PackageId>CastelloBranco.DataAnnotations</PackageId>
 	<Title>$(PackageId)</Title>

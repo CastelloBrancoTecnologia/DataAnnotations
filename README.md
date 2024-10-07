@@ -13,7 +13,7 @@
 - CNPJ
 - CPF
 - ComparePropertyes
-- DDD
+- AreaCode
 - DateGreatherThan
 - DateTimeOffset
 - FullName
@@ -28,11 +28,11 @@
 - BrazilAreaCode
 - BrazilianStates
 - CountryState
-- GentilicoEstadual
-- GentilicosEstaduais
-- NomesAleatorios
+- BrasilianStatesDemonyms
+- RandomNames
 - OrgaoExpedicao
 - OrgaosExpedicao
-- Pais
-- PaisesDoMundo
+- Country
+- WorldCountries
+- WorldCountriesDemonyms
 - RegiaoDDD
