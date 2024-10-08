@@ -8,13 +8,13 @@ using CastelloBranco.DataAnnotations.Resources;
 namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-public class NotEmpty : ValidationAttribute
+public class NotEmptyAttribute : ValidationAttribute
 {
-    public NotEmpty() : base(SharedResources.NotEmptyErrorMessage)
+    public NotEmptyAttribute() : base(SharedResources.NotEmptyErrorMessage)
     {
     }
 
-    public NotEmpty(string ErrorMessage) : base(ErrorMessage) { }
+    public NotEmptyAttribute(string ErrorMessage) : base(ErrorMessage) { }
 
     public bool AllowEmptyValue { get; set; } = false;
 

@@ -10,15 +10,15 @@ using CastelloBranco.Singletons;
 namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-public class SiglaEstadoBrasileiro : ValidationAttribute
+public class SiglaEstadoBrasileiroAttribute : ValidationAttribute
 {
-    public SiglaEstadoBrasileiro() : base(SharedResources.EstadoInvalido)
+    public SiglaEstadoBrasileiroAttribute() : base(SharedResources.EstadoInvalido)
     {
     }
 
     public bool AllowEmpty { get; set; }
 
-    public SiglaEstadoBrasileiro(string ErrorMessage) : base(ErrorMessage) { }
+    public SiglaEstadoBrasileiroAttribute(string ErrorMessage) : base(ErrorMessage) { }
 
     public override bool IsValid(object? value)
     {

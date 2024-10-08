@@ -13,13 +13,13 @@ using CastelloBranco.DataAnnotations.Resources;
 namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-public class CEP : ValidationAttribute
+public class CEPAttribute : ValidationAttribute
 {
-    public CEP() : base(SharedResources.CEPInválido)
+    public CEPAttribute() : base(SharedResources.CEPInválido)
     {
     }
 
-    public CEP(string ErrorMessage) : base(ErrorMessage) { }
+    public CEPAttribute(string ErrorMessage) : base(ErrorMessage) { }
 
     public bool OnlyDigits { get; set; }
     public bool AllowEmpty { get; set; }

@@ -10,15 +10,15 @@ using CastelloBranco.Singletons;
 namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-public class SiglaPais : ValidationAttribute
+public class SiglaPaisAttribute : ValidationAttribute
 {
-    public SiglaPais() : base(SharedResources.SiglaDoPaisInvalida)
+    public SiglaPaisAttribute() : base(SharedResources.SiglaDoPaisInvalida)
     {
     }
 
     public bool AllowEmpty { get; set; }
 
-    public SiglaPais(string ErrorMessage) : base(ErrorMessage) { }
+    public SiglaPaisAttribute(string ErrorMessage) : base(ErrorMessage) { }
 
     public override bool IsValid(object? value)
     {

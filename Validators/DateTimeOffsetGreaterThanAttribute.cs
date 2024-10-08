@@ -11,11 +11,11 @@ using CastelloBranco.DataAnnotations.Resources;
 namespace CastelloBranco.DataAnnotations;
 
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-public sealed class DateTimeOffsetDateGreaterThanAttribute : ValidationAttribute
+public sealed class DateTimeOffsetGreaterThanAttribute : ValidationAttribute
 {
     readonly String _basePropertyName = "";
 
-    public DateTimeOffsetDateGreaterThanAttribute(String basePropertyName)
+    public DateTimeOffsetGreaterThanAttribute(String basePropertyName)
         : base(SharedResources.DateTimeOffsetDateGreaterThanErrorMessage)
     {
         _basePropertyName = basePropertyName;
