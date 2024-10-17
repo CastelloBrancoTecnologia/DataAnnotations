@@ -20,7 +20,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_CultureCountyOverrides = es=es-CU
+		RESX_AutoCreateNewLanguageFiles = True
 		SolutionGuid = {CD418218-2CC7-4AA7-AD85-9DFA889C1025}
+		RESX_CultureCountyOverrides = es=es-CU
 	EndGlobalSection
 EndGlobal

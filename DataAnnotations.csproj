@@ -4,7 +4,7 @@
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <NeutralLanguage>pt-BR</NeutralLanguage>     
-        <Version>3.0.0.15</Version>
+        <Version>3.0.0.16</Version>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <PackageId>CastelloBranco.DataAnnotations</PackageId>
 	<Title>$(PackageId)</Title>
