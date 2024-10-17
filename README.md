@@ -1,9 +1,8 @@
 # Attributes:
 
-- LowerCaseAttribute  - Indica que Case de Textbox tem que ser lower
-- UpperCaseAttribute  - Indica que Case de Textbox tem que ser Upper
-- MaskAttribute       - Indica que Textbox tem que ter MaskedEdit
-
+- LowerCaseAttribute  - Field/Property needs to be in LowerCase 
+- UpperCaseAttribute  - Field/Property needs to be in UpperCase
+- MaskAttribute       - Field/Property need to be Masked with an pattern
 
 # Validators:
 
@@ -14,6 +13,7 @@
 - CPF
 - ComparePropertyes
 - AreaCode
+- CountryCode
 - DateGreatherThan
 - DateTimeOffset
 - FullName
