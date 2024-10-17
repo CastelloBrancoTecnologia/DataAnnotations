@@ -148,7 +148,7 @@
     <value>Passord connot contain repeated character</value>
   </data>
   <data name="EstadoInvalido" xml:space="preserve">
-    <value>Inválid State </value>
+    <value>Inválid State</value>
   </data>
   <data name="Idadenãopermitida" xml:space="preserve">
     <value>Age not allowed</value>

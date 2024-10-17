@@ -3,11 +3,8 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <NeutralLanguage>pt-BR</NeutralLanguage>
-        <IncrementVersionOnBuild>1.yyyy.Mdd.Hmm</IncrementVersionOnBuild>
-        <FileVersion>$(VersionPrefix)</FileVersion>
-        <AssemblyVersion>2410.8.0115.16</AssemblyVersion>
-        <Version>3.0.0.10</Version>
+        <NeutralLanguage>pt-BR</NeutralLanguage>     
+        <Version>3.0.0.15</Version>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <PackageId>CastelloBranco.DataAnnotations</PackageId>
 	<Title>$(PackageId)</Title>
@@ -20,9 +17,15 @@
         <IncludeSymbols>True</IncludeSymbols>
         <AssemblyName>CastelloBranco.DataAnnotations</AssemblyName>
         <RootNamespace>CastelloBranco.DataAnnotations</RootNamespace>
+        <AssemblyVersion>2410.17.0036.13</AssemblyVersion>
   </PropertyGroup>
 
 	<ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\SharedResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -31,6 +34,10 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\SharedResources.pt-BR.resx">
 		  <Generator>PublicResXFileCodeGenerator</Generator>
 	  </EmbeddedResource>	  

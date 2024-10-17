@@ -12,16 +12,13 @@ namespace CastelloBranco.DataAnnotations.Resources;
 
 public partial class SharedResources : INotifyPropertyChanged
 {
-    public static SharedResources Resources = new ();
-
-    public static void ChangeLanguage(string language)
+    public void ChangeLanguage(string language)
     {
-        Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
-        Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+        Thread.CurrentThread.CurrentCulture   = 
+          Thread.CurrentThread.CurrentUICulture = 
+          resourceCulture = new CultureInfo(language);
 
-        Resources.PropertyChanged?.Invoke(Resources, new PropertyChangedEventArgs(""));
-        Resources.PropertyChanged?.Invoke(Resources, new PropertyChangedEventArgs("Item"));
-        Resources.PropertyChanged?.Invoke(Resources, new PropertyChangedEventArgs("Item[]"));
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(""));       
     }
 
     public string? this[string key]
